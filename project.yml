@@ -41,3 +41,26 @@ targets:
         SWIFT_VERSION: "5.0"
         GENERATE_INFOPLIST_FILE: NO
         CODE_SIGN_STYLE: Automatic
+
+  PhotoEnhancerUnblurTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - Tests
+      - path: Sources/EnhanceService.swift
+    settings:
+      base:
+        PRODUCT_NAME: PhotoEnhancerUnblurTests
+        PRODUCT_BUNDLE_IDENTIFIER: com.zubeid.photoenhancerunblur.tests
+        GENERATE_INFOPLIST_FILE: YES
+        TARGETED_DEVICE_FAMILY: "1"
+        SWIFT_VERSION: "5.0"
+
+schemes:
+  Tests:
+    build:
+      targets:
+        PhotoEnhancerUnblurTests: [test]
+    test:
+      targets:
+        - PhotoEnhancerUnblurTests
