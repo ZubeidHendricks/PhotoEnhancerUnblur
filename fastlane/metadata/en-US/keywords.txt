@@ -1,0 +1,1 @@
+photo enhancer,unblur,sharpen,upscale,hd,enhance photo,clear photo,photo quality,fix
